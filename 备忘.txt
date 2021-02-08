@@ -1,0 +1,83 @@
+项目:长宏5000吨LPG组态王程序(英文)
+开始日期:2021/02/07
+/****************************************************************************************************************/
+硬件须知
+	工控机型号：HP 800G5
+	工控机数量：3{
+		集控台 2（24寸）
+		驾控台 1（24寸）
+	}
+	显示器分辨率：1920 x 1200 (HP E243i)
+	打印机类型：船东自供
+
+延伸报警板：11块(老英文屏)
+	EAP1：WHC
+	EAP2：C/E
+	EAP3：CREW'S MESS RM.
+	EAP4：OFFICER'S MESS RM.
+	EAP5：CREW'S RECREATION RM.
+	EAP6：E/R CONTROL CONSOLE
+	EAP7：OFFICER'S RECREATION RM.
+	EAP8：ELECTRICIAN
+	EAP9：2/E
+	EAP10：3/E
+	EAP11：4/E
+
+TCP通讯须知：
+	TCP外部设备(web发布)：
+		集控台电脑需设置远程发布，船员自用笔记本电脑会接入；
+	
+串口通讯须知：
+	集控台工控机串口(23个有效)：
+		COM4：NO.1 D/G ENGINE
+		COM5：NO.2 D/G ENGINE
+		COM6：NO.3 D/G ENGINE
+		COM7：SUA1 COMMU. A
+		COM8：SUA2 COMMU. A
+		COM9：SUA3 COMMU. A
+		COM10：AMS-EAP
+		COM11：M/E REMOTE CTRL. A
+		
+		COM12：MSB
+		COM13：INTERIOR COMMINICATION
+		COM14：DGPS
+		COM15：SPARE
+		COM16：VDR
+		COM17：SOLENOID VALVE
+		COM18：GYRO COMPASS SERIAL
+		COM19：SHAFT TORQUE
+		
+		COM20：SUA1 COMMU. B
+		COM21：SUA2 COMMU. B
+		COM22：SUA3 COMMU. B
+		COM23：bridge alert system
+		COM24：NO.1 SHAFT POWER
+		COM25：NO.2 SHAFT POWER
+		COM26：DOPPLER LOG
+		COM27：WIND SPEED & WIND
+报警组：
+	
+
+采集箱数量：3(1台内 2台外)	
+
+	台内采集箱：
+		1S01(主)+1S02(子)+1S03(子)+1S04(子)【类型:DI modbus地址:1】
+		1S05(主)【类型:DI modbus地址:2】
+		1S06【类型:DO modbus地址:3】
+		1S07【类型:AO modbus地址:4】
+		1S08【类型:AO modbus地址:5】
+		1S09【类型:PT modbus地址:6】
+		
+	1号采集箱：
+		2S01(主)+2S02(子)+2S03(子)+2S04(子)【类型:DI modbus地址:1】
+		2S05(主)+2S06(子)+2S07(子)+2S08(子)【类型:DI modbus地址:2】	
+		2S09【类型:AI modbus地址:3】
+		2S10【类型:PT modbus地址:4】
+		2S11【类型:PT modbus地址:5】
+
+	2号采集箱：
+		3S01(主)+3S02(子)+3S03(子)+3S04(子)【类型:DI modbus地址:1】
+		3S05(主)【类型:AI modbus地址:2】
+
+/****************************************************************************************************************/
+
