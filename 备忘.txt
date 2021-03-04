@@ -13,19 +13,32 @@
 延伸报警板：11块(老英文屏)
 	EAP1：WHC
 	EAP2：C/E
-	EAP3：CREW'S MESS RM.
-	EAP4：OFFICER'S MESS RM.
-	EAP5：CREW'S RECREATION RM.
-	EAP6：E/R CONTROL CONSOLE
-	EAP7：OFFICER'S RECREATION RM.
-	EAP8：ELECTRICIAN
-	EAP9：2/E
-	EAP10：3/E
-	EAP11：4/E
+	EAP3：2/E 
+	EAP4：3/E 
+	EAP5：4/E 
+	EAP6：ELECTRICIAN 
+	EAP7：CREW'S MESS RM. 
+	EAP8：OFFICER'S MESS RM. 
+	EAP9：CREW'S RECREATION RM. 
+	EAP10：OFFICER'S RECREATION RM. 
+	EAP11：E/R CONTROL CONSOLE 
+
+延伸板分组：
+	1.Main Engine shutdown
+	2.Main Engine alarm
+	3.Propulsion Alarms
+	4.Aux Engines Alarms
+	5.Boiler & incinerator and BT Alarms
+	6.Misc Alarms
+	7.Power station alarm
+	8.Bilge Alarms
+	9.Fire Alarms
 
 TCP通讯须知：
-	TCP外部设备(web发布)：
-		集控台电脑需设置远程发布，船员自用笔记本电脑会接入；
+	TCP外部设备：
+		web发布:集控台电脑需设置远程发布，船员自用笔记本电脑会接入；
+		RELAY SWITCH BOX 
+		M/E EMS
 	
 串口通讯须知：
 	集控台工控机串口(23个有效)：
@@ -36,12 +49,12 @@ TCP通讯须知：
 		COM8：SUA2 COMMU. A
 		COM9：SUA3 COMMU. A
 		COM10：AMS-EAP
-		COM11：M/E REMOTE CTRL. A
+		COM11：PCS CONTROL UNIT
 		
 		COM12：MSB
-		COM13：INTERIOR COMMINICATION
+		COM13：PCS LOCAL PROPELSION CONTROL UNIT
 		COM14：DGPS
-		COM15：SPARE
+		COM15：SIGNAL MODULE 
 		COM16：VDR
 		COM17：SOLENOID VALVE
 		COM18：GYRO COMPASS SERIAL
@@ -62,7 +75,7 @@ TCP通讯须知：
 
 	台内采集箱：
 		1S01(主)+1S02(子)+1S03(子)+1S04(子)【类型:DI modbus地址:1】
-		1S05(主)【类型:DI modbus地址:2】
+		1S05(主)+1S10(子)【类型:DI modbus地址:2】
 		1S06【类型:DO modbus地址:3】
 		1S07【类型:AO modbus地址:4】
 		1S08【类型:AO modbus地址:5】
@@ -74,10 +87,16 @@ TCP通讯须知：
 		2S09【类型:AI modbus地址:3】
 		2S10【类型:PT modbus地址:4】
 		2S11【类型:PT modbus地址:5】
+		2S12【类型:AI modbus地址:6】
+		2S13(主)【类型:DI modbus地址:7】
 
 	2号采集箱：
 		3S01(主)+3S02(子)+3S03(子)+3S04(子)【类型:DI modbus地址:1】
 		3S05(主)【类型:AI modbus地址:2】
+	
+	3号采集箱（位于驾控台，与集控台设备通讯）：
+		4S01【类型:AO modbus地址:1】
+		4S02【类型:AI modbus地址:2】
 
 /****************************************************************************************************************/
 
